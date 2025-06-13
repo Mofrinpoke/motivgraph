@@ -1,4 +1,3 @@
-
 require 'sinatra'
 require 'json'
 
@@ -13,4 +12,10 @@ post '/download' do
   data = JSON.parse(request.body.read)
   File.open('public/data.json', 'w') { |f| f.write(data.to_json) }
   { status: 'ok' }.to_json
+end
+
+get '/motiv' do
+  @title = "就活・自己分析用モチベーショングラフ作成ツール"
+  @description = "就活とか自己分析したいときに、モチベーショングラフを作って自分を可視化しよう"
+  erb :motiv
 end
