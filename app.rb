@@ -4,8 +4,8 @@ require 'json'
 set :public_folder, 'public'
 
 get '/' do
-  @title = "MotivGraph - トップページ"
-  @description = "自己分析用モチベーショングラフ作成ツールのトップページ"
+  @title = "MotivGraph - 就活・自己分析用モチベーショングラフ作成ツール"
+  @description = "自己分析用モチベーショングラフ作成ツール"
   erb :index
 end
 
